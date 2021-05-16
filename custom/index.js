@@ -72,7 +72,7 @@ function draw() {
 		ctx.textAlign = "center";
 		let now = new Date();
 		time = `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}:${now.getSeconds().toString().padStart(2, '0')}`;
-		date = `${now.getDay().toString().padStart(2, '0')}.${now.getMonth().toString().padStart(2, '0')}.${now.getFullYear().toString().padStart(2, '0')}`
+		date = `${now.getDate().toString().padStart(2, '0')}.${(now.getMonth() + 1).toString().padStart(2, '0')}.${now.getFullYear().toString().padStart(2, '0')}`
 		ctx.fillText(time, canvas.width / 2, canvas.width * (58 / 800));
 		ctx.fillText(date, canvas.width / 2, canvas.height - (canvas.width * (42 / 800)));
 		ctx.fillStyle = fillStyle;
