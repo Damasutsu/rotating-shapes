@@ -98,7 +98,7 @@ var favCtx = favCan.getContext("2d");
 favCan.width = favCan.height = 128;
 let player,
 	points,
-	//favicon = document.head.querySelector('.favicon'),
+	favicon = document.head.querySelector('.favicon'),
 	isRotating,
 	size,
 	timerOnFullscreen;
