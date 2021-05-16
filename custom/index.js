@@ -25,9 +25,9 @@ customElements.define('custom-shape', class extends HTMLElement {
 		shadow.appendChild(canvas);
 	}
 });
-//var favCan = document.createElement("canvas");
-//var favCtx = favCan.getContext("2d");
-//favCan.width = favCan.height = 128;
+var favCan = document.createElement("canvas");
+var favCtx = favCan.getContext("2d");
+favCan.width = favCan.height = 128;
 
 let player,
 	points = [],
@@ -77,8 +77,8 @@ function draw() {
 		ctx.fillText(date, canvas.width / 2, canvas.height - (canvas.width * (42 / 800)));
 		ctx.fillStyle = fillStyle;
 	}
-	//favCtx.drawImage(canvas, 0, 0, favCan.width, favCan.height);
-	//favicon.href = favCan.toDataURL('image/png');
+	favCtx.drawImage(canvas, 0, 0, favCan.width, favCan.height);
+	favicon.href = favCan.toDataURL('image/png');
 };
 
 document.querySelector('#angle').addEventListener('input', (e) => {
