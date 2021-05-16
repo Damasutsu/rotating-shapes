@@ -34,7 +34,7 @@ let player,
 	size,
 	lastSize,
 	isRotating = true;
-//favicon = document.head.querySelector('.favicon');
+favicon = document.head.querySelector('.favicon');
 
 function draw() {
 	ctx.fillStyle = fillStyle;
