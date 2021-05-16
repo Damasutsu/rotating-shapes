@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+    <meta lang="ru">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link class="favicon" rel="shortcut icon" href="favicon.png" type="image/png">
+	<title>Rotated pointed custom shape</title>
+	<style>
+		body {
+            margin: 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: center;
+		}
+	</style>
+</head>
+
+<body>
+	<label>Size canvas</label>
+	<input type="range" id="size" min="200" max="800" value="200" step="20">
+	<label>Shape angle</label>
+	<input type="range" id="angle" min="-270" max="90" value="-270" step="1">
+	<label>Line width</label>
+	<input type="range" id="lineWidth" min="1" max="10" value="4" step="1">
+	<label>Rotating speed</label>
+	<input type="range" id="inc" min="1" max="60" value="1" step="0.1">
+	<label>Stop rotate</label>
+	<input type="checkbox" id="stopRotating">
+    <label>Time on Fullscreen</label>
+    <input type="checkbox" id="timer">
+	<label>Close shape?</label>
+	<input type="checkbox" id="close">
+	<label>Shape color</label>
+	<input type="color" id="shapeColor" value="#ffffff">
+	<label>Background color</label>
+	<input type="color" id="backColor" value="#000000">
+	<br>
+	<button id="undo">Undo</button>
+	<button id="reset">Reset</button>
+    <br>
+    <button id="upload">Upload JSON points</button>
+    <button id="saveAsImage">Save As Image</button>
+    <button id="saveAsJSON">Save As JSON</button>
+    <button id="full">Fullscreen</button>
+	<br>
+    <custom-shape></custom-shape>
+	<script src="./vector.js" charset="utf-8"></script>
+	<script src="./index.js" charset="utf-8"></script>
+</body>
+
+</html>
