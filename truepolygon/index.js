@@ -93,9 +93,9 @@ customElements.define('text-spoiler', class extends HTMLElement {
 	}
 });
 
-//var favCan = document.createElement("canvas");
-//var favCtx = favCan.getContext("2d");
-//favCan.width = favCan.height = 128;
+var favCan = document.createElement("canvas");
+var favCtx = favCan.getContext("2d");
+favCan.width = favCan.height = 128;
 let player,
 	points,
 	//favicon = document.head.querySelector('.favicon'),
@@ -149,8 +149,8 @@ function draw() {
 		ctx.fillText(date, canvas.width / 2, canvas.height - 42);
 		ctx.fillStyle = fillStyle;
 	}
-	//favCtx.drawImage(canvas, 0, 0, favCan.width, favCan.height);
-	//favicon.href = favCan.toDataURL('image/png');
+	favCtx.drawImage(canvas, 0, 0, favCan.width, favCan.height);
+	favicon.href = favCan.toDataURL('image/png');
 };
 
 document.querySelector('#angles').addEventListener('input', (e) => {
