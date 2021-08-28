@@ -95,7 +95,7 @@ customElements.define('text-spoiler', class extends HTMLElement {
 
 var favCan = document.createElement("canvas");
 var favCtx = favCan.getContext("2d");
-favCan.width = favCan.height = 128;
+favCan.width = favCan.height = 96;
 let player,
 	points,
 	favicon = document.head.querySelector('.favicon'),
