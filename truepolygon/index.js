@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	angles = parseInt(document.querySelector('#angles').value);
 	stepAngle = 360 / angles;
 	resIn.setAttribute('text', `180°(${angles} - 2) / ${angles} = 180° - (360° / ${angles}) = ${180 - stepAngle}°`);
-	resOut.setAttribute('text', `360° - ${180 - stepAngle}° = ${180 + stepAngle}°`);
+	resOut.setAttribute('text', `180° + (360° / ${angles}) = ${180 + stepAngle}°`);
 	points = [];
 	for (var i = 0; i <= angles; i++) {
 		points.push({
